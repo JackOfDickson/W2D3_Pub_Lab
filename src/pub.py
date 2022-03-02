@@ -16,4 +16,6 @@ class Pub:
     def remove_drink_from_menu(self, drink):
         self.drinks.remove(drink)
     
-    
+    def sell_drink_to_customer(self, drink, customer):
+        self.increase_till(drink.price)
+        customer.reduce_money_in_wallet(drink.price)

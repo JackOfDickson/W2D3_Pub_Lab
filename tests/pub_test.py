@@ -1,6 +1,7 @@
 import unittest
 from src.pub import Pub
 from src.drink import Drink
+from src.customer import Customer
 
 class TestPub(unittest.TestCase):
     def setUp(self):
@@ -43,3 +44,12 @@ class TestPub(unittest.TestCase):
         number_of_drinks = self.pub.check_number_of_drinks()
 
         self.assertEqual(0, number_of_drinks)
+
+    def test_sell_drink(self):
+        self.pub.add_drink_to_menu(self.drink1)
+        customer = Customer("Derek", 100)
+        drink = self.drink1
+        self.pub.sell_drink_to_customer(drink, customer)
+
+        self.assertEqual(96.5, customer.wallet)
+        self.assertEqual(103.5, self.pub.till)
