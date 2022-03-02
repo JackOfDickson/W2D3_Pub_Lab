@@ -25,7 +25,7 @@ class TestPub(unittest.TestCase):
         self.assertEqual([], self.pub.drinks)
 #
     def test_add_drink_to_menu(self):
-        Pub.drinks.add_drink_to_menu(self.drink1)
-        number_of_drinks = Pub.check_number_of_drinks()
+        self.pub.add_drink_to_menu(self.drink1)
+        number_of_drinks = self.pub.check_number_of_drinks()
 
         self.assertEqual(1, number_of_drinks)
