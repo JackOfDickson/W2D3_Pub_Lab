@@ -14,4 +14,6 @@ class Pub:
         return len(self.drinks)
 
     def remove_drink_from_menu(self, drink):
-        
+        self.drinks.remove(drink)
+    
+    

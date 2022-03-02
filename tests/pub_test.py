@@ -36,3 +36,10 @@ class TestPub(unittest.TestCase):
         number_of_drinks = self.pub.check_number_of_drinks()
 
         self.assertEqual(2, number_of_drinks)
+    
+    def test_remove_drink(self):
+        self.pub.add_drink_to_menu(self.drink1)
+        self.pub.remove_drink_from_menu(self.drink1)
+        number_of_drinks = self.pub.check_number_of_drinks()
+
+        self.assertEqual(0, number_of_drinks)
