@@ -23,3 +23,5 @@ class Pub:
     def check_age_of_customer(self, customer):
         customer.age >= 18
 
+    def check_drunkenness(self, customer):
+        customer.drunkenness > 6.0
