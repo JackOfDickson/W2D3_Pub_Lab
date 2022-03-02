@@ -63,3 +63,4 @@ class TestPub(unittest.TestCase):
         customer = Customer("Wee Jimmy", 25, 8)
         self.pub.check_age_of_customer(customer)
         self.assertEqual(False, customer.age >= 18)
+    
