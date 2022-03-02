@@ -12,3 +12,6 @@ class Pub:
     
     def check_number_of_drinks(self):
         return len(self.drinks)
+
+    def remove_drink_from_menu(self, drink):
+        
