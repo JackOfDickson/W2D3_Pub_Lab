@@ -53,3 +53,13 @@ class TestPub(unittest.TestCase):
 
         self.assertEqual(96.5, customer.wallet)
         self.assertEqual(103.5, self.pub.till)
+    
+    def test_check_age_true(self):
+        customer = Customer("Derek", 100, 60)
+        self.pub.check_age_of_customer(customer)
+        self.assertEqual(True, customer.age >= 18)
+
+    def test_check_age_false(self):
+        customer = Customer("Wee Jimmy", 25, 8)
+        self.pub.check_age_of_customer(customer)
+        self.assertEqual(False, customer.age >= 18)

@@ -19,3 +19,7 @@ class Pub:
     def sell_drink_to_customer(self, drink, customer):
         self.increase_till(drink.price)
         customer.reduce_money_in_wallet(drink.price)
+    
+    def check_age_of_customer(self, customer):
+        customer.age >= 18
+
