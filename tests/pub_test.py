@@ -47,7 +47,7 @@ class TestPub(unittest.TestCase):
 
     def test_sell_drink(self):
         self.pub.add_drink_to_menu(self.drink1)
-        customer = Customer("Derek", 100)
+        customer = Customer("Derek", 100, 60)
         drink = self.drink1
         self.pub.sell_drink_to_customer(drink, customer)
 
